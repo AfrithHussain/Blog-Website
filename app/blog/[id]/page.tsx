@@ -37,7 +37,7 @@ interface Article {
 
 // Format the date to a more readable format
 const formatDate = (date: string) => {
-  const options = { year: 'numeric', month: 'short', day: 'numeric' };
+  const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
   return new Date(date).toLocaleDateString('en-US', options);
 };
 
